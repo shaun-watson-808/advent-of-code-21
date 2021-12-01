@@ -11,10 +11,8 @@ func main() {
 	for i := 0; i < len(shared.Input)-2; i++ {
 		sum := shared.Input[i] + shared.Input[i+1] + shared.Input[i+2]
 
-		if i != 0 {
-			if sum > previousSum {
-				increase++
-			}
+		if i != 0 && sum > previousSum {
+			increase++
 		}
 
 		previousSum = sum
